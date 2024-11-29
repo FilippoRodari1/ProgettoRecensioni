@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Altre dichiarazioni CSS */
+
+
+:root {
+  --background-color: #1a1a1a; /* Colore di sfondo principale */
+  --text-color: rgba(255, 255, 255, 0.87); /* Colore del testo */
+  --link-color: #646cff; /* Colore dei link */
+  --link-hover-color: #535bf2; /* Colore dei link al passaggio del mouse */
+}
+
+
+#root {
+  height: 100%;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif; /* Font di base */
+  background-color: var(--background-color); /* Sfondo per tutte le pagine */
+  color: var(--text-color); /* Colore del testo per tutte le pagine */
+  margin: 0; /* Rimuove margini di default */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garantisce che il body occupi almeno tutta l'altezza della finestra */
+  height: 100%;
+}
+
+h1, h2, h3 {
+  margin: 0; /* Rimuove margini di default per intestazioni */
+}
+
+a {
+  color: var(--link-color); /* Colore dei link */
+  text-decoration: none; /* Rimuove la sottolineatura dai link */
+}
+
+a:hover {
+  color: var(--link-hover-color); /* Colore dei link al passaggio del mouse */
+}
+
+/* Regole per bottoni */
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+/* Media query per temi chiari */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff; /* Sfondo per temi chiari */
+    --text-color: #213547; /* Colore del testo per temi chiari */
+    --link-color: #646cff; /* Colore dei link per temi chiari */
+    --link-hover-color: #747bff; /* Colore dei link al passaggio del mouse per temi chiari */
+  }
+}
+
